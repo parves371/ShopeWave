@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 import RootLayout from "./Components/Layouts/RootLayout";
 import Shope from "./Pages/Shope";
 import SingleProduct from "./Pages/SingleProduct";
+import Cart from "./Pages/Cart";
 
 function App() {
   const router = createBrowserRouter(
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/shope" element={<Shope />} />
         <Route path="/product/:id" element={<SingleProduct />} />
+        <Route path="/cart" element={<Cart/>} />
       </Route>
     )
   );

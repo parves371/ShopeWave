@@ -3,6 +3,7 @@ import { FaSearch, FaUserAlt, FaShoppingCart } from 'react-icons/fa';
 import { GoTriangleDown } from 'react-icons/go';
 import { HiBars3BottomLeft } from 'react-icons/hi2';
 import { ImCross } from 'react-icons/im';
+import { Link } from 'react-router-dom';
 
 
 import Container from './Layouts/Container';
@@ -91,7 +92,7 @@ const NavHeader = () => {
                   <div className='p-5 text-base'>
                     <h6 className='font-normal pb-3'>Subtotal: <span className='font-bold'>$44.00</span></h6>
                     <div className='flex justify-between'>
-                      <a href="" className='text-[#262626] text-sm font-bold py-4 px-10 inline-block border border-[#2B2B2B] border-solid'>View Cart</a>
+                      <Link to="/cart" className='text-[#262626] text-sm font-bold py-4 px-10 inline-block border border-[#2B2B2B] border-solid'>View Cart</Link>
                       <a href="" className='text-[#ffffff] text-sm font-bold py-4 px-10 inline-block border border-[#2B2B2B] border-solid bg-black'>Checkout</a>
                     </div>
                   </div>
