@@ -93,7 +93,7 @@ const NavHeader = () => {
                     <h6 className='font-normal pb-3'>Subtotal: <span className='font-bold'>$44.00</span></h6>
                     <div className='flex justify-between'>
                       <Link to="/cart" className='text-[#262626] text-sm font-bold py-4 px-10 inline-block border border-[#2B2B2B] border-solid'>View Cart</Link>
-                      <a href="" className='text-[#ffffff] text-sm font-bold py-4 px-10 inline-block border border-[#2B2B2B] border-solid bg-black'>Checkout</a>
+                      <Link to={"/checkout"} className='text-[#ffffff] text-sm font-bold py-4 px-10 inline-block border border-[#2B2B2B] border-solid bg-black'>Checkout</Link>
                     </div>
                   </div>
                 </div>

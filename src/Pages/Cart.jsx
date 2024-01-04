@@ -7,6 +7,7 @@ import Breadcrumb from "../Components/Layouts/Breadcrumb";
 import Flex from "../Components/Layouts/Flex";
 import Carting from "../assets/carting.png";
 import Img from "../Components/Layouts/Img";
+import { Link } from "react-router-dom";
 const Cart = () => {
   return (
     <section>
@@ -80,7 +81,7 @@ const Cart = () => {
             <h5 className="w-1/2 py-4 px-5">389.99 $</h5>
           </Flex>
         </Flex>
-        <button className="px-6 py-4 bg-[#262626] text-white mt-7 mr-4 cd:mr-0">Proceed to Checkout</button>
+        <Link to={"/checkout"} className="px-6 py-4 bg-[#262626] text-white mt-7 mr-4 cd:mr-0">Proceed to Checkout</Link>
         </div>
       </Container>
     </section>
