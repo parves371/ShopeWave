@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CiStar } from "react-icons/ci";
 import { GoPlus } from "react-icons/go";
+import { useDispatch } from "react-redux";
 
 import Breadcrumb from "../Components/Layouts/Breadcrumb";
 import Container from "../Components/Layouts/Container";
 import Flex from "../Components/Layouts/Flex";
+import { addToCart } from "../app/slices/cartSlice";
 
 const SingleProduct = () => {
   // const [imgs, setImgs] = useState(null);
@@ -27,7 +29,11 @@ const SingleProduct = () => {
 
     fetchData();
   }, []);
-  console.log(products);
+  // console.log(products);
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(addToCart({ ...products, qun: 1 }));
+  };
   return (
     <section className="font-dm">
       <Container>
@@ -47,8 +53,9 @@ const SingleProduct = () => {
             }
           >
             {products.images &&
-              products?.images.map((items) => (
+              products?.images.map((items, index) => (
                 <img
+                  key={index}
                   src={items}
                   alt=""
                   className="w-[46%] sm:w-[47%] md:w-[40%] lg:w-[40%] xl:w-1/5 px-2 md:px-4 lg:px-6 xl:px-8 mb-4 cd:w-[48%]"
@@ -78,7 +85,11 @@ const SingleProduct = () => {
             Ratings {products.rating}%
           </div>
         </Flex>
-        <Flex className={"gap-x-5 items-center mt-5 relative w-[1600px] ml-4 sm:ml-6 md:ml-8 lg:ml-10 cd:ml-0"}>
+        <Flex
+          className={
+            "gap-x-5 items-center mt-5 relative w-[1600px] ml-4 sm:ml-6 md:ml-8 lg:ml-10 cd:ml-0"
+          }
+        >
           <strike className="text-base text-gray-700 font-normal  mt-2 sm:mt-0 ">
             ${products.price}
           </strike>
@@ -134,7 +145,10 @@ const SingleProduct = () => {
           <button className="py-2 sm:py-4 px-4 sm:px-11 border border-[#262626] text-[#262626] text-base sm:text-sm font-bold">
             Add to Wish List
           </button>
-          <button className="py-2 sm:py-4 px-4 sm:px-16 border border-[#262626] text-[#FFFFFF] text-base sm:text-sm font-bold bg-[#262626]">
+          <button
+            className="py-2 sm:py-4 px-4 sm:px-16 border border-[#262626] text-[#FFFFFF] text-base sm:text-sm font-bold bg-[#262626]"
+            onClick={handleAddToCart}
+          >
             Add to Cart
           </button>
           <span className="border-b border-[#D8D8D8] block w-[780px] absolute mt-[140px]"></span>
