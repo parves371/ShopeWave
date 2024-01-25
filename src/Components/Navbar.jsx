@@ -32,8 +32,8 @@ const Navbar = () => {
                             <List className={"sm:flex gap-x-10 font-dm text-sm text-[#767676] capitalize justify-center absolute sm:relative w-full bg-black sm:bg-transparent left-0 top-20 text-center sm:top-0"}>
                                 <ListItem listName={"Home"} linkClassName={"py-4 px-5 block hover:text-[#FFFFFF] transition-all  sm:p-0 sm:hover:pl-0 sm:hover:text-[#767676]"} link={'/'} />
                                 <ListItem listName={"Shope"} linkClassName={"py-4 px-5 block hover:text-[#FFFFFF] transition-all  sm:p-0 sm:hover:pl-0 sm:hover:text-[#767676]"} link={'/shope'}/>
-                                <ListItem listName={"About"} linkClassName={"py-4 px-5 block hover:text-[#FFFFFF] transition-all  sm:p-0 sm:hover:pl-0 sm:hover:text-[#767676]"} />
-                                <ListItem listName={"Contacts"} linkClassName={"py-4 px-5 block hover:text-[#FFFFFF] transition-all  sm:p-0 sm:hover:pl-0 sm:hover:text-[#767676]"} />
+                                <ListItem listName={"About"} linkClassName={"py-4 px-5 block hover:text-[#FFFFFF] transition-all  sm:p-0 sm:hover:pl-0 sm:hover:text-[#767676]"}  link={'/about'}/>
+                                <ListItem listName={"Contacts"} linkClassName={"py-4 px-5 block hover:text-[#FFFFFF] transition-all  sm:p-0 sm:hover:pl-0 sm:hover:text-[#767676]"} link={'/contacts'}/>
                                 <ListItem listName={"Journal"} linkClassName={"py-4 px-5 block hover:text-[#FFFFFF] transition-all  sm:p-0 sm:hover:pl-0 sm:hover:text-[#767676]"} />
                             </List>
                         }

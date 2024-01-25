@@ -12,6 +12,10 @@ import Shope from "./Pages/Shope";
 import SingleProduct from "./Pages/SingleProduct";
 import Cart from "./Pages/Cart";
 import Checkout from "./Pages/Checkout";
+import About from "./Pages/About";
+import Contacts from "./Pages/Contacts";
+import Login from "./Pages/Login";
+import { Singup } from "./Pages/Singup";
 
 function App() {
   const router = createBrowserRouter(
@@ -22,6 +26,10 @@ function App() {
         <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/checkout" element={<Checkout/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/contacts" element={<Contacts/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/singup" element={<Singup/>} />
 
       </Route>
     )
